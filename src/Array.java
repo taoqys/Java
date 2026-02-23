@@ -35,14 +35,22 @@ public class Array {
         System.out.println(Arrays.toString(ns1));
 
         int[][] scores = {
-                { 82, 90, 91 }, // 学生甲的语数英成绩
-                { 68, 72, 64 }, // 学生乙的语数英成绩
-                { 95, 91, 89 }, // ...
-                { 67, 52, 60 },
-                { 79, 81, 85 },
+                {82, 90, 91}, // 学生甲的语数英成绩
+                {68, 72, 64}, // 学生乙的语数英成绩
+                {95, 91, 89}, // ...
+                {67, 52, 60},
+                {79, 81, 85},
         };
-        double average = 0;
-        
+
+        double sum = 0;
+        double count = 0;
+        for (int[] score : scores) {
+            for (int i : score) {
+                sum += i;
+                count++;
+            }
+        }
+        double average = sum / count;
         System.out.println(average);
         if (Math.abs(average - 77.733333) < 0.000001) {
             System.out.println("测试成功");
