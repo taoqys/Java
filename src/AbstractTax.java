@@ -1,4 +1,4 @@
-public class AbstractTex {
+public class AbstractTax {
     public static void main(String[] args) {
         IndvidualIncome[] incomes = {new Salary(10000)};
         System.out.println(totalTax(incomes));
